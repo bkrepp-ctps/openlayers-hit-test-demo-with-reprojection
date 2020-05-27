@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>OpenLayers Hit-test Demo #2 - Reprojection</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.0/css/ol.css" type="text/css">
+<link rel="stylesheet" href="demoApp.css"/>
+<script src="libs/jquery-3.4.1.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.0/build/ol.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.2/proj4-src.js"></script>
+<script src="demoApp.js" type="text/javascript"></script>
+</head>
+<h3>OpenLayers Hit-test Demo #2 - Reprojection</h3>
+<h4>The map is in EPSG:3857, but the backing data in EPSG:26986.</h4>
+<h4>This demo uses the proj4.js library to perform the necessary reprojection.</h4>
+<h3>Click on or near a station point to identify it using a BBOX query.</h3>
+<body onload="initialize();">
+<div id="map">
+</div>
+</body>
+</html>
