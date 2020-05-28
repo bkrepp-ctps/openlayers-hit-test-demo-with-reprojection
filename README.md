@@ -23,12 +23,12 @@ To perform the reprojection:
      2. Create a proj4.js projector object to handle projections between EPSG:3857 and EPSG:26986:  
         var oProjector = proj4('EPSG:3857', 'EPSG:26986');
      3. Note that this object will have to member functions:  
-             forward - to project from EPSG:3857 to EPSG:26986 
+             forward - to project from EPSG:3857 to EPSG:26986  
              inverse - to project from EPSG:26986 to EPSG:3857
      4. Call the 'forward' function on the point to be projected;
         the return value is a 2-element array reprsenting the coordinates of the
         point in EPSG:26986:  
         var projected_point = oProjector.forward(point_to_be_projected);
 
--- B. Krepp, attending metaphysician
+-- B. Krepp, attending metaphysician  
 26-28 May 2020
