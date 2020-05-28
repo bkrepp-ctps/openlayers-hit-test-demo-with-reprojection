@@ -10,23 +10,22 @@ This demo depends upon the following external libraries:
 
 To perform the reprojection:
 1. Preparation:
-     a. Include the JS file for the proj4.js library in the application page
-     b. The proj4.js library comes pre-built with "knowledge" of a few
+     1. Include the JS file for the proj4.js library in the application page
+     2. The proj4.js library comes pre-built with "knowledge" of a few
         SRSs, including EPSG:4326 and EPSG:3857
-     c. Give the proj4.js library "knowledge" of the EPSG:26986 SRS:
-         1. Obtain the proj4 definition string for EPSG:26986 from spatialreference.org:
-            https://spatialreference.org/ref/epsg/26986/proj4/
-         2. Assign this to a JS varable (for convenience)
+     3. Give the proj4.js library "knowledge" of the EPSG:26986 SRS:
+         1. Obtain the proj4 definition string for EPSG:26986 from [spatialreference.org](https://spatialreference.org/ref/epsg/26986/proj4/)
+         2. Assign this to a JS varable - for convenience
          3. Give the proj4.js library "knowledge" of EPSG:26986:
             proj4.defs('EPSG:26986', js_string_variable);
 2. Perform the actual reprojection
-     a. Get the coordinates (a 2-element array [x,y]) of the EPSG:3857 point to be projected
-     b. Create a proj4.js projector object to handle projections between EPSG:3857 and EPSG:26986:
+     1. Get the coordinates (a 2-element array [x,y]) of the EPSG:3857 point to be projected
+     2. Create a proj4.js projector object to handle projections between EPSG:3857 and EPSG:26986:
         var oProjector = proj4('EPSG:3857', 'EPSG:26986');
-     c. Note that this object will have to member functions: 
-             forward - to project from EPSG:3857 to EPSG:26986
+     3. Note that this object will have to member functions:  
+             forward - to project from EPSG:3857 to EPSG:26986 
              inverse - to project from EPSG:26986 to EPSG:3857
-     d. Call the 'forward' function on the point to be projected;
+     4. Call the 'forward' function on the point to be projected;
         the return value is a 2-element array reprsenting the coordinates of the
         point in EPSG:26986:
         var projected_point = oProjector.forward(point_to_be_projected);
