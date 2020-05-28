@@ -16,18 +16,18 @@ To perform the reprojection:
      3. Give the proj4.js library "knowledge" of the EPSG:26986 SRS:
          1. Obtain the proj4 definition string for EPSG:26986 from [spatialreference.org](https://spatialreference.org/ref/epsg/26986/proj4/)
          2. Assign this to a JS varable - for convenience
-         3. Give the proj4.js library "knowledge" of EPSG:26986:
+         3. Give the proj4.js library "knowledge" of EPSG:26986:  
             proj4.defs('EPSG:26986', js_string_variable);
 2. Perform the actual reprojection
      1. Get the coordinates (a 2-element array [x,y]) of the EPSG:3857 point to be projected
-     2. Create a proj4.js projector object to handle projections between EPSG:3857 and EPSG:26986:
+     2. Create a proj4.js projector object to handle projections between EPSG:3857 and EPSG:26986:  
         var oProjector = proj4('EPSG:3857', 'EPSG:26986');
      3. Note that this object will have to member functions:  
              forward - to project from EPSG:3857 to EPSG:26986 
              inverse - to project from EPSG:26986 to EPSG:3857
      4. Call the 'forward' function on the point to be projected;
         the return value is a 2-element array reprsenting the coordinates of the
-        point in EPSG:26986:
+        point in EPSG:26986:  
         var projected_point = oProjector.forward(point_to_be_projected);
 
 -- B. Krepp, attending metaphysician
